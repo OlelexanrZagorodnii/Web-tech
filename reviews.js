@@ -1,4 +1,4 @@
-// reviews.js
+
 const reviews = [
   {
     id: 1,
