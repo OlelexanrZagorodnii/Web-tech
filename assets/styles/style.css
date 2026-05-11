@@ -1,0 +1,314 @@
+/* 1. ПІДКЛЮЧЕННЯ ШРИФТІВ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg-main: #e8f5f7;        /* Основний світлий фон */
+    --text-dark: #1a1a1a;      /* Колір заголовків */
+    --text-gray: #555555;      /* Колір основного тексту */
+    --accent: #6d8c8e;
+    --white: #ffffff;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    /* Пастельні градієнтні плями як у Figma */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 192, 203, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(173, 216, 230, 0.3) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.6) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+/* 2. ШАПКА (HEADER) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.brand {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover { opacity: 0.6; }
+
+/* 3. ГОЛОВНИЙ БЛОК (HERO) */
+main > section:first-of-type {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+main > section figure img {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+main > section > p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    font-weight: 300;
+}
+
+/* 4. БЛОКИ 01, 02, 03 (APPROACH) */
+article {
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+article header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+article header p {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+article h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/* Контейнер для 3-х колонок */
+article > div {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+article section {
+    flex: 1;
+    padding: 0 40px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+article section:first-child { border-left: none; }
+
+article h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+article section p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 90%;
+    margin: 60px auto;
+}
+
+/* 5. ФІЛОСОФІЯ (PHILOSOPHY) — ВИПРАВЛЕННЯ ЦЕНТРУВАННЯ */
+/* Це головна секція, де все має бути в один стовпчик */
+main > section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Заголовок "Entering the world..." */
+main > section:nth-of-type(2) h2 {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    max-width: 900px;
+    line-height: 1.1;
+    margin: 20px 0 60px 0;
+}
+
+/* Контейнер всередині філософії (де картинка і текст) */
+main > section:nth-of-type(2) section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main > section:nth-of-type(2) h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Картинка (860x500 як у Figma) */
+main > section:nth-of-type(2) figure img {
+    width: 100%;
+    max-width: 860px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+main > section:nth-of-type(2) p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+button {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 14px 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* 6. ВІДГУКИ (TESTIMONIALS) */
+.testimonials {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 100px 5%;
+}
+
+.testimonials h2 {
+    font-family: var(--font-serif);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+    text-align: left;
+}
+
+.card__title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card__info {
+    font-style: italic;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* 7. ФУТЕР (FOOTER) */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 10%;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    align-items: flex-start;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+}
+
+.footer-logo strong {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.footer-content {
+    text-align: left;
+}
+
+address {
+    font-style: normal;
+    color: #666;
+    line-height: 2;
+    font-size: 0.95rem;
+}
+
+address a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.location {
+    margin-top: 40px;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+/* АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    article > div { flex-direction: column; }
+    article section { border-left: none; border-top: 1px solid #eee; padding: 30px 0; }
+    footer { flex-direction: column; align-items: center; text-align: center; gap: 50px; }
+    .footer-content { text-align: center; }
+}

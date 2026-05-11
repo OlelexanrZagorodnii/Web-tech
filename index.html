@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Karecare Wellness — The KareCare Approach</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
 
@@ -114,6 +115,12 @@
         <button type="button">Get Connected</button>
       </section>
     </section>
+    <section class="testimonials">
+    <h2>Відгуки наших клієнтів</h2>
+    <div id="testimonialsList" class="grid-container">
+      <!-- Тут з'являться відгуки через JS -->
+    </div>
+  </section>
   </main>
 
   <footer>
@@ -137,18 +144,12 @@
         <p>KareCare © 2025 All Rights Reserved</p>
       </div>
     </div>
+  
   </footer>
 
-<section id="testimonials">
-  <header>
-    <p>Відгуки</p>
-    <h2>Що кажуть наші клієнти</h2>
-  </header>
-
-  <div id="reviews-container" class="reviews-grid"></div>
-</section>
-
-<script src="reviews.js"></script>
+<!-- 3. Підключення скриптів (ПОРЯДОК ВАЖЛИВИЙ) -->
+  <script src="reviews.js"></script>
+  <script src="render-reviews.js"></script>
 
 </body>
 </html>
